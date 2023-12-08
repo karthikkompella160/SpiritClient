@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    background: linear-gradient(45deg, rgb(9 46 69) 0%, rgb(9 55 65) 100%);
+    height: 40px;
+    padding-top: 9px;
+
+}
+
+.heading {
+    position: absolute;
+    left: 20px;
+    font-weight: 900;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.header{
+    box-shadow:rgba(133, 189, 215, 0.8784313725) 0px 10px 10px -15px; ;
+}

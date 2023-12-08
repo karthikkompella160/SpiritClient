@@ -1,0 +1,28 @@
+.linechart{
+    width: 50%;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    border-color: whitesmoke;
+}
+.chartcontainer{
+    height: 300px;
+    margin:20px
+}
+
+#charttitle{
+    color:rgb(31,41,55);
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+.dailyprogress{
+    margin-top: 50px;
+    background-color: white;
+    border-color: black;
+    width: 100%;
+    border-radius: 20px;
+    height: 10px;
+}
