@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,8 +9,9 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
 
   toggle:boolean=false
+  showdropDown:boolean=false;
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -34,13 +35,39 @@ export class DashboardComponent implements OnInit {
 
 
 navigate(url:string){
-  this.router.navigate([url]);
+  this.router.navigate([url],{relativeTo:this.activatedRoute});
 
 }
 
 showdropdown(className:string){
+
+
+  this.selectedComponent();
   const dropdown= document.querySelector('.'+className) as HTMLDivElement;
+
+  if(!this.showdropDown){
   dropdown.style.display="block";
+ 
+  }
+  else{
+    dropdown.style.display="none";
+  }
+  this.showdropDown=!this.showdropDown;
+}
+
+selectedComponent(){
+
+
+    const clickDiv: HTMLElement | null = document.querySelector('.profileimage');
+
+    console.log(clickDiv)
+    if (clickDiv) {
+        clickDiv.addEventListener('click', function() {
+            this.classList.toggle('raise');
+        });
+    }
+
 
 }
 }
+

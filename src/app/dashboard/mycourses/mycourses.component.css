@@ -1,0 +1,45 @@
+.course-card {
+    position: relative;
+    background-color: #f8f9fa; /* Set your desired background color */
+    border-radius: 10px; /* Set border radius as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow effect */
+    text-align: center; /* Center align the content */
+    padding: 20px; /* Add padding for inner content */
+    height: 350px !important;
+    width: 400px;
+    color:black;
+    font-size: 20px;
+    contain: layout;
+    display: flexbox;
+   
+    
+
+  }
+  
+  .course-card .card-img-top {
+    border-top-left-radius: 10px; /* Rounded corners for the top of the image */
+    border-top-right-radius: 10px;
+    width: 100%; /* Adjust image width */
+   /* Maintain aspect ratio */
+ 
+    object-fit: cover; /* Scale image while preserving aspect ratio */
+  }
+  
+  .courses{
+  
+    background-color: rgb(195, 229, 218);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+
+
+  .card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between cards */
+  }
+  

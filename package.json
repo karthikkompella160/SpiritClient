@@ -28,6 +28,7 @@
     "hammerjs": "^2.0.8",
     "jszip": "^3.6.0",
     "minireset.css": "~0.0.4",
+    "ng-zorro-antd": "^12.1.1",
     "ngx-ui-loader": "^13.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",

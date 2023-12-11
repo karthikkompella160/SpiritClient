@@ -10,10 +10,12 @@ export class ContentComponent implements OnInit {
    logins: number[] = [1, 2, 3, 4, 5]; // Replace with your actual login data
    timeSpent: number[] = [10, 15, 20, 25, 30]; // Replace with your actual time spent data
    loginsChart:any;
+   percent: number=0;;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.increase();
 
     const ctx = document.getElementById('canvas') as HTMLCanvasElement | null;
 
@@ -52,4 +54,17 @@ if (ctx) {
 }
   }
 
+
+  increase(): void {
+    if(this.percent===60){
+        return;
+    }
+    this.percent = this.percent + 10;
+    if (this.percent > 100) {
+      this.percent = 100;
+      
+    }
+    this.increase();
+  }
+ 
 }
