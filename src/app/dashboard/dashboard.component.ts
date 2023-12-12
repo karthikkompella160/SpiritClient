@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ResponseService } from '../services/response.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,10 +12,15 @@ export class DashboardComponent implements OnInit {
   toggle:boolean=false
   showdropDown:boolean=false;
 
-  constructor(private router:Router,private activatedRoute:ActivatedRoute) { }
+  isVisible = false;
+  isOkLoading = false;
+  constructor(private router:Router,private activatedRoute:ActivatedRoute,private responseService:ResponseService) { }
 
   ngOnInit(): void {
+   // console.log("IN Dashboard "+  JSON.stringify(this.responseService.response.get('user')))
+
   }
+ 
 
 
    toggleSidebar() {
@@ -36,6 +42,10 @@ export class DashboardComponent implements OnInit {
 
 navigate(url:string){
   this.router.navigate([url],{relativeTo:this.activatedRoute});
+
+}
+externalNavigation(url:string){
+  this.router.navigate([url]);
 
 }
 
@@ -69,5 +79,25 @@ selectedComponent(){
 
 
 }
+
+
+
+  showModal(): void {
+    this.isVisible = true;
+  }
+
+  handleOk(): void {
+    this.isOkLoading = true;
+    setTimeout(() => {
+      this.isVisible = false;
+      this.isOkLoading = false;
+    }, 3000);
+
+    this.externalNavigation('logout');
+  }
+
+  handleCancel(): void {
+    this.isVisible = false;
+  }
 }
 

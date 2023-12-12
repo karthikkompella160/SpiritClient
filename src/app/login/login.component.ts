@@ -17,8 +17,12 @@ export class LoginComponent implements OnInit {
 
 
   validateLogin(form: NgForm) {
-    console.log(form)
-    this.loginService.validateLogin(true);
+    const loginCredentials={
+      email:form.controls.email.value,
+      pwd:form.controls.password.value
+    }
+
+    this.loginService.validateLogin(loginCredentials);
      
     }
     

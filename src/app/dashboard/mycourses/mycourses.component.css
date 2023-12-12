@@ -1,45 +1,125 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  gap: 10px;
+  margin-left: 100px;
+  margin-top: 65px;
+  overflow: auto;
+  max-height: 600px;
+
+
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+
+}
+
+.grid-container::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+.grid-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+
+}
+
+.grid-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+
+  border-radius: 5px;
+
+}
+
+.grid-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+
+}
+
 .course-card {
-    position: relative;
-    background-color: #f8f9fa; /* Set your desired background color */
-    border-radius: 10px; /* Set border radius as needed */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow effect */
-    text-align: center; /* Center align the content */
-    padding: 20px; /* Add padding for inner content */
-    height: 350px !important;
-    width: 400px;
-    color:black;
-    font-size: 20px;
-    contain: layout;
-    display: flexbox;
-   
-    
-
-  }
-  
-  .course-card .card-img-top {
-    border-top-left-radius: 10px; /* Rounded corners for the top of the image */
-    border-top-right-radius: 10px;
-    width: 100%; /* Adjust image width */
-   /* Maintain aspect ratio */
- 
-    object-fit: cover; /* Scale image while preserving aspect ratio */
-  }
-  
-  .courses{
-  
-    background-color: rgb(195, 229, 218);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-  }
+  background-color: #becbd8;
 
 
-  .card-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px; /* Adjust the gap between cards */
-  }
-  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+
+  padding: 20px;
+
+  height: 350px !important;
+  width: 400px;
+  color: black;
+  font-size: 20px;
+  contain: layout;
+
+
+
+}
+
+.course-card .card-img-top {
+  border-top-left-radius: 10px;
+
+  border-top-right-radius: 10px;
+  width: 100%;
+
+  object-fit: fill;
+
+}
+
+.courses {
+  background-color: rgb(195, 229, 218);
+  height: 100%;
+  width: 100%;
+
+}
+
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+[nz-icon] {
+  margin: 6px;
+  font-size: 40px;
+}
+
+
+.nocoursemessage {
+  background-color: rgb(31, 41, 55);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  width: 150%;
+  transform: translate(100%);
+}
+
+.card-title{
+  font-size: 15px;
+  font-weight: 500;
+}
+.syllabus {
+  color: white;
+  position: relative;
+  bottom: 10px;
+  border: 2px solid white;
+  background-color: #1a237e; /* Dark blue-greyish background color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.syllabus:hover {
+  background-color: #303f9f; /* Darker blue-greyish background color on hover */
+  color: white;
+  border: 2px solid #303f9f; /* Darker border on hover */
+}

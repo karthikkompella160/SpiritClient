@@ -45,7 +45,10 @@ aside {
 }
 
 main {
-    flex: 1;
+   width: 100%;
+    
+  flex-direction: row;
+  flex-wrap: nowrap;
     /* Take up remaining space */
     padding: 20px;
     background-color: #f2f4f6;
@@ -166,7 +169,7 @@ svg {
     width: max-content;
     border-radius: 10px;
     position: absolute;
-    left: 88%;
+    left: 86%;
     top: 10%;
     cursor: pointer;
 
@@ -224,7 +227,10 @@ svg {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-
+.modalfooter.okbutton{
+    background-color: red !important;
+    color: black !important;
+}
 
 @keyframes buttonfill {
     0% {

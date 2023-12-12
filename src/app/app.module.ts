@@ -17,6 +17,12 @@ import en from '@angular/common/locales/en';
 import { HttpClientModule } from '@angular/common/http';
 import { MycoursesComponent } from './dashboard/mycourses/mycourses.component';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NotesComponent } from './dashboard/notes/notes.component';
+import { NzCommentModule } from 'ng-zorro-antd/comment';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 registerLocaleData(en);
 
@@ -28,7 +34,8 @@ registerLocaleData(en);
     HeaderComponent,
     FooterComponent,
     ContentComponent,
-    MycoursesComponent
+    MycoursesComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,12 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     NzProgressModule,
-    NzCardModule
+    NzCardModule,
+    NzIconModule,
+    NzDropDownModule,
+    NzCommentModule,
+    NzButtonModule,
+    NzModalModule
     
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Chart from 'chart.js/auto';
+import { ResponseService } from 'src/app/services/response.service';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -12,9 +13,11 @@ export class ContentComponent implements OnInit {
    loginsChart:any;
    percent: number=0;;
 
-  constructor() { }
+  constructor(private responseService:ResponseService) { }
 
   ngOnInit(): void {
+    
+   // console.log("IN CONTENT "+this.responseService.response)
     this.increase();
 
     const ctx = document.getElementById('canvas') as HTMLCanvasElement | null;

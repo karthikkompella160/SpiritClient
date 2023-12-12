@@ -86,7 +86,8 @@
               "browserTarget": "SpiritClient:build:production"
             },
             "development": {
-              "browserTarget": "SpiritClient:build:development"
+              "browserTarget": "SpiritClient:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
