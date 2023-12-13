@@ -1,0 +1,14 @@
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="profile-image-container">
+            <img src="assets\images\testcard.svg" alt="Profile Image" class="profile-image">
+            <input type="file" id="imageInput" accept="image/*" onchange="updateProfileImage(event)">
+        </div>
+        <div class="profile-info">
+            <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: 500;" class="username">{{user?.name}}
+            </h2>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-weight: 500 !important; font-size: medium;"
+                class="email">{{user?.email}}</p>
+        </div>
+    </div>
+</div>

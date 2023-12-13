@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class HttpService {
 
-  constructor(private http:HttpClient){}
+  constructor(private http: HttpClient) { }
 
-  doPost(url:any,payload:any):Observable<any>{
-      return  this.http.post(url,payload);
+  doPost(url: any, payload: any): Observable<any> {
+    return this.http.post(url, payload);
   }
 }

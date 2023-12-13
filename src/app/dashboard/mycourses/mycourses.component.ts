@@ -9,17 +9,17 @@ import { ResponseService } from 'src/app/services/response.service';
   templateUrl: './mycourses.component.html',
   styleUrls: ['./mycourses.component.css']
 })
-export class MycoursesComponent implements OnInit{
+export class MycoursesComponent implements OnInit {
 
-  courses!:Array<Course>;
-  constructor(private responseService:ResponseService,private httpService:HttpService) { }
-  
+  courses!: Array<Course>;
+  constructor(private responseService: ResponseService, private httpService: HttpService) { }
+
 
   ngOnInit(): void {
-   this.courses=  this.responseService.courses;
-  console.log(this.courses)
-  
+    this.courses = this.responseService.courses;
+    console.log(this.courses)
+
   }
-  
+
 
 }

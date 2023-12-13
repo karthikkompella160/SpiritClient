@@ -8,5 +8,5 @@ import { formatDistance } from 'date-fns';
 export class NotesComponent implements OnInit {
   ngOnInit(): void {
   }
- 
+
 }

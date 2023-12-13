@@ -45,10 +45,10 @@ aside {
 }
 
 main {
-   width: 100%;
-    
-  flex-direction: row;
-  flex-wrap: nowrap;
+    width: 100%;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
     /* Take up remaining space */
     padding: 20px;
     background-color: #f2f4f6;
@@ -189,7 +189,7 @@ svg {
     color: white;
     border: 1px solid #000;
     border-radius: 4px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease;
     background-color: rgb(31, 41, 55);
     width: -webkit-fill-available;
     height: fit-content;
@@ -198,11 +198,9 @@ svg {
 
 .dropdowncontainer::-moz-selection {
     background-color: #000;
-    transform: scale(1.04);
 }
 
 .dropdowncontainer .dropdownstyle ul li a:hover {
-    transform: scale(1.03);
     box-shadow: rgba(66, 68, 68, 0.878) 0px 23px 10px -20px;
 
 }
@@ -211,23 +209,19 @@ svg {
     position: relative;
     float: inline-start;
     height: 20px;
-    transform: translateX(-10px);
 
 }
 
-.dropdowntext {
-    transform: translate3d(-15px, 5px, 0px)
 
-}
 
 
 
 .dropdowncontainer .dropdownstyle ul li a:hover {
-    transform: translateY(-2px), scale(1.03);
+    transform: scale(1.03);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.modalfooter.okbutton{
+.modalfooter.okbutton {
     background-color: red !important;
     color: black !important;
 }

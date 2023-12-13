@@ -1,28 +1,25 @@
+<div class="grid-container">
 
- <div class="grid-container">
+  <ng-container *ngIf="courses!=undefined; else default">
+    <div class="grid-item" *ngFor="let course of courses">
 
-<ng-container *ngIf="courses!=undefined; else default">
-  <div class="grid-item" *ngFor="let course of courses">
+      <img src={{course.logoPath}} alt="Course Img" />
+      <div class="card-body">
+        <h3 class="card-title">{{course.name}}</h3>
+        <nz-progress nzType="line" [nzPercent]="55"
+          [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"></nz-progress>
 
-    <img src= {{course.logoPath}} alt="Course Img" />
-    <div class="card-body">
-      <h3 class="card-title">{{course.name}}</h3>
-      <nz-progress
-        nzType="line"
-        [nzPercent]="55"
-        [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"
-      ></nz-progress>
-       
-     <span><a style="height: 30px; width: 40px;" ><span nz-icon nz- nzType="play-circle"  nzTheme="fill"></span></a> </span> 
+        <span><a style="height: 30px; width: 40px;"><span nz-icon nz- nzType="play-circle" nzTheme="fill"></span></a>
+        </span>
+      </div>
     </div>
-  </div>
-</ng-container>
+  </ng-container>
 
-  
- </div>
 
- <ng-template #default>
+</div>
+
+<ng-template #default>
   <div class="nocoursemessage">
-  No courses to show! <a href="http://localhost:4400/register" target="_blank">register now</a>
+    No courses to show! <a href="http://localhost:4400/register" target="_blank">register now</a>
   </div>
-  </ng-template>
+</ng-template>

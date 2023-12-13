@@ -7,7 +7,7 @@ import Course from '../model/Course';
 })
 export class ResponseService {
 
-   user!:User;
-   courses!:Array<Course>;
+  user!: User;
+  courses!: Array<Course>;
   constructor() { }
 }

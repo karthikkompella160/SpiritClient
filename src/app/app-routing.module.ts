@@ -5,19 +5,21 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContentComponent } from './dashboard/content/content.component';
 import { MycoursesComponent } from './dashboard/mycourses/mycourses.component';
 import { NotesComponent } from './dashboard/notes/notes.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AuthGuard } from './gaurd/auth.guard';
 
 const routes: Routes = [
 
-  {path:"",component:LoginComponent},
-  {path:"logout",redirectTo:""},
-  {path:"dashboard",component:DashboardComponent,
-  children:[
-    {path:"dashboardcontent",component:ContentComponent},
-    {path:"mycourses",component:MycoursesComponent},
-    {path:"notes",component:NotesComponent}
-   
-
-]}
+  { path: "", component: LoginComponent },
+  { path: "logout", redirectTo: "" },
+  { path: "dashboard", component: DashboardComponent, canActivate: [AuthGuard],
+    children: [
+      { path: "dashboardcontent", component: ContentComponent },
+      { path: "mycourses", component: MycoursesComponent },
+      { path: "notes", component: NotesComponent },
+      { path: "myprofile", component: ProfileComponent },
+    ]
+  }
 ];
 
 @NgModule({
