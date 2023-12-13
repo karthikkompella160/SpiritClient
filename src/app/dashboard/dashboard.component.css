@@ -52,7 +52,7 @@ main {
     /* Take up remaining space */
     padding: 20px;
     background-color: #f2f4f6;
-    
+
 }
 
 .toggle-button {
@@ -167,7 +167,7 @@ svg {
     width: max-content;
     border-radius: 10px;
     position: absolute;
-    left: 86%;
+    left: 88%;
     top: 10%;
     cursor: pointer;
 
@@ -214,10 +214,10 @@ svg {
     color: #555;
 }
 
-app-notification{
+app-notification {
     position: absolute;
-    left:75%;
-    top:8%;
+    left: 75%;
+    top: 8%;
 
 }
 
@@ -275,12 +275,12 @@ app-notification{
 }
 
 
-.toggletheme{
+.toggletheme {
     position: absolute;
-     left:80%;
+    left: 80%;
 }
 
-#timer{
+#timer {
     position: relative;
     top: 0%;
     left: 120%;

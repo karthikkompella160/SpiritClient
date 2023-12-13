@@ -2,7 +2,7 @@
   <aside class="sidebar">
     <nav>
       <ul>
-        
+
         <li (click)="navigate('dashboardcontent')">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="dashboard">
             <g data-name="28-Dashboard">
@@ -46,7 +46,7 @@
 
 
         <li id="menuicon" (click)="toggleSidebar()"
-          style="background-color: none; width: 30px; left: 30px; height: 40px; position:absolute; bottom: 0px;" >
+          style="background-color: none; width: 30px; left: 30px; height: 40px; position:absolute; bottom: 0px;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="left-arrow">
             <g data-name="Layer 2">
               <g data-name="arrowhead-left">
@@ -59,22 +59,26 @@
               </g>
             </g>
           </svg>
-      
-   
+
+
         </li>
       </ul>
     </nav>
   </aside>
 
-  <main  class="mainpage">
+  <main class="mainpage">
     <div class=" notificationcontainer toggletheme">
-      <nz-switch  [(ngModel)]="switchValue" [nzControl]="true" (click)="clickSwitch()" [nzLoading]="loading"></nz-switch>
-    <span><div id="timer"><h2><b>{{ formattedTime }}</b></h2></div></span>  
+      <nz-switch [(ngModel)]="switchValue" [nzControl]="true" (click)="clickSwitch()" [nzLoading]="loading"></nz-switch>
+      <span>
+        <div id="timer">
+          <h2><b>{{ formattedTime }}</b></h2>
+        </div>
+      </span>
     </div>
 
-<app-notification *ngIf="showNotification"></app-notification>
+    <app-notification *ngIf="showNotification"></app-notification>
 
-    <div (click)="toggleNotification();hideDropDown()"  class="notificationcontainer">
+    <div (click)="toggleNotification();hideDropDown()" class="notificationcontainer">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="notifications">
         <path fill="none" d="M0 0h24v24H0V0z"></path>
         <path
@@ -181,17 +185,6 @@
             </a>
           </li>
           <li>
-            <a class="dropdown-item">
-              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Notification">
-                  <path
-                    d="M12 23a2 2 0 0 0 2-2H10A2 2 0 0 0 12 23zM4 19H20a1 1 0 0 0 .707-1.707L19 15.586V10a7.006 7.006 0 0 0-6-6.92V2a1 1 0 0 0-2 0V3.08A7.006 7.006 0 0 0 5 10v5.586L3.293 17.293A1 1 0 0 0 4 19zm2.707-2.293A1 1 0 0 0 7 16V10a5 5 0 0 1 10 0v6a1 1 0 0 0 .293.707l.293.293H6.414z"
-                    fill="#fdfdfd" class="color000000 svgShape"></path>
-                </svg>
-              </span>
-              <span class="dropdowntext">Notifications</span>
-            </a>
-          </li>
-          <li>
             <a class="dropdown-item"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.35 6.35"
                   id="Settings">
                   <path fill-rule="evenodd"
@@ -243,7 +236,7 @@
       <router-outlet></router-outlet>
     </div>
 
-    
+
   </main>
 </div>
 
