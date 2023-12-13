@@ -14,10 +14,10 @@ const routes: Routes = [
   { path: "logout", redirectTo: "" },
   { path: "dashboard", component: DashboardComponent, canActivate: [AuthGuard],
     children: [
-      { path: "dashboardcontent", component: ContentComponent },
-      { path: "mycourses", component: MycoursesComponent },
-      { path: "notes", component: NotesComponent },
-      { path: "myprofile", component: ProfileComponent },
+      { path: "dashboardcontent", component: ContentComponent,canActivate: [AuthGuard] },
+      { path: "mycourses", component: MycoursesComponent ,canActivate: [AuthGuard]},
+      { path: "notes", component: NotesComponent ,canActivate: [AuthGuard]},
+      { path: "myprofile", component: ProfileComponent,canActivate: [AuthGuard] },
     ]
   }
 ];

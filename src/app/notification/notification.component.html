@@ -1,0 +1,16 @@
+
+<div *ngIf="this.notifications.length!=0 else defaultnotification" class="notificationbox">
+<div *ngFor="let notification of notifications; let i = index" class="notification-card">
+    <span class="close-button" (click)="closeNotification(i)">X</span>
+    <h3>{{ notification.title }}</h3>
+    <p>{{ notification.content }}</p>
+</div>
+
+</div>
+
+<ng-template #defaultnotification> 
+
+    <div class="notification-card">
+        <h3>No Notifications</h3>
+    </div>
+</ng-template>

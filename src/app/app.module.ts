@@ -25,6 +25,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { ProfileComponent } from './profile/profile.component';
 import { NzMessageModule } from 'ng-zorro-antd/message';
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
+import { NotificationComponent } from './notification/notification.component';
 
 registerLocaleData(en);
 
@@ -38,7 +40,8 @@ registerLocaleData(en);
     ContentComponent,
     MycoursesComponent,
     NotesComponent,
-    ProfileComponent
+    ProfileComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,8 @@ registerLocaleData(en);
     NzCommentModule,
     NzButtonModule,
     NzModalModule,
-    NzMessageModule
+    NzMessageModule,
+    NzSwitchModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

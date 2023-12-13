@@ -52,9 +52,7 @@ main {
     /* Take up remaining space */
     padding: 20px;
     background-color: #f2f4f6;
-    /* Content area background color */
-    color: #fff;
-    /* Content area text color */
+    
 }
 
 .toggle-button {
@@ -177,9 +175,59 @@ svg {
 
 .notificationcontainer {
     position: absolute;
-    left: 92%;
+    left: 90.5%;
     top: 4%;
     cursor: pointer;
+}
+
+#notifications-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.notification-card {
+    position: relative;
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.notification-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.notification-card p {
+    margin: 10px 0 0;
+    color: #555;
+}
+
+app-notification{
+    position: absolute;
+    left:75%;
+    top:8%;
+
+}
+
+.close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #888;
+    font-size: 1.2em;
 }
 
 .dropdowncontainer .dropdownstyle ul li a {
@@ -224,6 +272,19 @@ svg {
 .modalfooter.okbutton {
     background-color: red !important;
     color: black !important;
+}
+
+
+.toggletheme{
+    position: absolute;
+     left:80%;
+}
+
+#timer{
+    position: relative;
+    top: 0%;
+    left: 120%;
+    bottom: 22px;
 }
 
 @keyframes buttonfill {
