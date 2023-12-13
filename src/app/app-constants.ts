@@ -11,6 +11,7 @@ export class AppConstants {
 
         return {
             getUser: "spiritapi/getUser",
+            getCoursesByUser:"spiritapi/getCoursesByUser"
         }
 
     }

@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
+import { AfterContentChecked, Component, DoCheck, OnInit } from '@angular/core';
 import { AppConstants } from 'src/app/app-constants';
 import Course from 'src/app/model/Course';
 import { HttpService } from 'src/app/services/http.service';
@@ -15,10 +15,16 @@ export class MycoursesComponent implements OnInit {
   constructor(private responseService: ResponseService, private httpService: HttpService) { }
 
 
+
   ngOnInit(): void {
     this.courses = this.responseService.courses;
     console.log(this.courses)
+  }
 
+  refreshCourses(){
+       this.httpService.doPost(AppConstants.APIS.getCoursesByUser,this.responseService.user).subscribe((data)=>{
+        this.courses=data.response;
+       })
   }
 
 

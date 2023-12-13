@@ -1,6 +1,7 @@
 <div class="grid-container">
 
   <ng-container *ngIf="courses!=undefined; else default">
+   
     <div class="grid-item" *ngFor="let course of courses">
 
       <img src={{course.logoPath}} alt="Course Img" />
