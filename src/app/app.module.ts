@@ -27,8 +27,23 @@ import { ProfileComponent } from './profile/profile.component';
 import { NzMessageModule } from 'ng-zorro-antd/message';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NotificationComponent } from './notification/notification.component';
+import {  NgxUiLoaderConfig, NgxUiLoaderModule } from 'ngx-ui-loader';
 
 registerLocaleData(en);
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  bgsColor: '#ffff',
+  bgsOpacity: 1,
+ 
+  bgsSize: 40,
+
+  fgsColor: '#0000',
+  text:"Doing Science",
+  textColor:"black",
+  textPosition:"center-right",
+  minTime:5,
+  maxTime:10
+  
+  };
 
 @NgModule({
   declarations: [
@@ -47,6 +62,8 @@ registerLocaleData(en);
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
+
     FormsModule,
     HttpClientModule,
     NzProgressModule,
@@ -57,7 +74,7 @@ registerLocaleData(en);
     NzButtonModule,
     NzModalModule,
     NzMessageModule,
-    NzSwitchModule
+    NzSwitchModule,
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

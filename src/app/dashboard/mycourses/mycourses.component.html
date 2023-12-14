@@ -1,19 +1,20 @@
 <div class="grid-container">
 
   <ng-container *ngIf="courses!=undefined; else default">
-   
-    <div class="grid-item" *ngFor="let course of courses">
+
+    <div class="grid-item" (ngComponentOutlet)="randomPercentage()" *ngFor="let course of courses; let i = index">
 
       <img src={{course.logoPath}} alt="Course Img" />
       <div class="card-body">
         <h3 class="card-title">{{course.name}}</h3>
-        <nz-progress nzType="line" [nzPercent]="55"
+        <nz-progress nzType="line" [nzPercent]="percentages[i]"
           [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"></nz-progress>
 
         <span><a style="height: 30px; width: 40px;"><span nz-icon nz- nzType="play-circle" nzTheme="fill"></span></a>
         </span>
       </div>
     </div>
+    {{randomPercentage()}}
   </ng-container>
 
 

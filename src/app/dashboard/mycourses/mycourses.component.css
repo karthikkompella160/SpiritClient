@@ -1,4 +1,5 @@
 .grid-container {
+
   display: grid;
   grid-template-columns: repeat(4, 20%);
   gap: 10px;
@@ -7,10 +8,10 @@
   overflow: auto;
   max-height: 600px;
 
-
 }
 
 .grid-item {
+
   border: 1px solid #ccc;
   padding: 20px;
   text-align: center;
@@ -20,7 +21,6 @@
 
 .grid-container::-webkit-scrollbar {
   width: 10px;
-
 }
 
 .grid-container::-webkit-scrollbar-track {
@@ -56,16 +56,13 @@
   font-size: 20px;
   contain: layout;
 
-
-
 }
 
 .course-card .card-img-top {
-  border-top-left-radius: 10px;
 
+  border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
-
   object-fit: fill;
 
 }
@@ -74,7 +71,6 @@
   background-color: rgb(195, 229, 218);
   height: 100%;
   width: 100%;
-
 }
 
 
@@ -116,14 +112,11 @@
   bottom: 10px;
   border: 2px solid white;
   background-color: #1a237e;
-  /* Dark blue-greyish background color */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .syllabus:hover {
   background-color: #303f9f;
-  /* Darker blue-greyish background color on hover */
   color: white;
   border: 2px solid #303f9f;
-  /* Darker border on hover */
 }

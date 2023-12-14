@@ -21,12 +21,10 @@ export class DashboardComponent implements OnInit, OnDestroy {
   seconds: number = 0;
   formattedTime: string = '00:00:00';
   isTimerRunning: boolean = false;
-  showNotification: boolean=false;
+  showNotification: boolean = false;
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private authService: AuthService, private message: NzMessageService) { }
 
   ngOnInit(): void {
-
-
   }
 
   toggleSidebar() {
@@ -163,15 +161,15 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   }
 
-  showNotifications(visible:boolean) {
-    this.showNotification= visible;
+  showNotifications(visible: boolean) {
+    this.showNotification = visible;
   }
-  toggleNotification(){
-    this.showNotification= !this.showNotification;
+  toggleNotification() {
+    this.showNotification = !this.showNotification;
 
   }
 
- 
+
 }
 
 

@@ -12,6 +12,7 @@ import { ResponseService } from 'src/app/services/response.service';
 export class MycoursesComponent implements OnInit {
 
   courses!: Array<Course>;
+  percentages: number[] = [];
   constructor(private responseService: ResponseService, private httpService: HttpService) { }
 
 
@@ -21,11 +22,18 @@ export class MycoursesComponent implements OnInit {
     console.log(this.courses)
   }
 
-  refreshCourses(){
-       this.httpService.doPost(AppConstants.APIS.getCoursesByUser,this.responseService.user).subscribe((data)=>{
-        this.courses=data.response;
-       })
+  refreshCourses() {
+    this.httpService.doPost(AppConstants.APIS.getCoursesByUser, this.responseService.user).subscribe((data) => {
+      this.courses = data.response;
+    })
   }
+
+  randomPercentage() {
+
+    console.log("CALLED")
+    this.percentages.push(Math.floor(Math.random() * 100) + 1);
+  }
+
 
 
 }

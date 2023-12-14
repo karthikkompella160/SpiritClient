@@ -14,6 +14,4 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.responseService.user;
   }
-
-
 }

@@ -11,14 +11,14 @@ export class NotificationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.notifications.length==0)
+    console.log(this.notifications.length == 0)
 
     this.createNotification(
-    'Time Running Out','You have very few hours to complete C training'
+      'Time Running Out', 'You have very few hours to complete C training'
     )
     this.createNotification(
-      'Timer running!!','It seems you forget to stop the timer'
-      )
+      'Timer running!!', 'It seems you forget to stop the timer'
+    )
   }
 
 

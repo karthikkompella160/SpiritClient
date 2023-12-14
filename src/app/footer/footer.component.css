@@ -4,20 +4,21 @@
     height: 40px;
     padding-top: 9px;
     margin-top: 47.18%;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
+
 }
 
 .footerdata {
-
     position: fixed;
-    left:42%;
+    left: 42%;
     font-weight: 500;
     font-size: 12px;
     color: rgb(255, 255, 255);
     z-index: 1;
 }
 
-.footer{
-    box-shadow:rgba(133, 189, 215, 0.8784313725) 0px 10px 10px -15px; ;
+.footer {
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 10px 10px -15px;
+    
 }

@@ -8,12 +8,14 @@
 
 .heading {
     position: absolute;
-    left: 20px;
+    left: 22px;
     font-weight: 900;
     font-size: 20px;
     color: rgb(255, 255, 255);
+    top: 2px;
 }
 
-.header{
-    box-shadow:rgba(133, 189, 215, 0.8784313725) 0px 10px 10px -15px; ;
+.header {
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 10px 10px -15px;
+    
 }

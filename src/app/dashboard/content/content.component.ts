@@ -8,8 +8,8 @@ import { ResponseService } from 'src/app/services/response.service';
 })
 export class ContentComponent implements OnInit {
 
-    logins: number[] = [1, 2, 3, 4, 5]; // Replace with your actual login data
-    timeSpent: number[] = [10, 15, 20, 25, 30]; // Replace with your actual time spent data
+    logins: number[] = [1, 2, 3, 4, 5];
+    timeSpent: number[] = [10, 15, 20, 25, 30];
     loginsChart: any;
     percent: number = 0;;
 
@@ -35,7 +35,7 @@ export class ContentComponent implements OnInit {
                         hoverBackgroundColor: "green",
                     }],
                     xLabels: ['Login Frequency'],
-            
+
                     yLabels: ['TimeSpent']
                 },
                 options: {
@@ -43,13 +43,13 @@ export class ContentComponent implements OnInit {
                         x: {
                             type: 'linear',
                             position: 'bottom',
-                            offset:true,
+                            offset: true,
 
                         },
                         y: {
                             type: 'linear',
                             position: 'left',
-                            offset:true,
+                            offset: true,
 
                         }
                     },
@@ -61,15 +61,7 @@ export class ContentComponent implements OnInit {
 
 
     increase(): void {
-        if (this.percent === 60) {
-            return;
-        }
-        this.percent = this.percent + 10;
-        if (this.percent > 100) {
-            this.percent = 100;
-
-        }
-        this.increase();
+        this.percent = Math.floor(Math.random() * 100) + 1;
     }
 
 }

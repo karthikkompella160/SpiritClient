@@ -1,0 +1,14 @@
+<!-- src/app/sticky-notes/sticky-notes.component.html -->
+<div class="notesarea">
+    <textarea [(ngModel)]="newNote" placeholder="Add a new note"></textarea>
+    <button class="addnotebtn" (click)="addNote()">Add Note</button>
+</div>
+<div class="sticky-notes-container">
+    <div *ngFor="let note of notes" class="sticky-note" [style.top]="note.top" [style.left]="note.left"
+        (dragend)="handleDragEnd($event, note)" draggable="true"> <span class="close-button"
+            (click)="deleteNote(note.id)">x</span>
+        <div class="notecontent">{{ note.content }}</div>
+
+
+    </div>
+</div>

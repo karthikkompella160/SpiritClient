@@ -5,6 +5,7 @@ import { AppConstants } from '../app-constants';
 import { ResponseService } from '../services/response.service';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { AuthService } from '../services/auth.service';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,10 @@ import { AuthService } from '../services/auth.service';
 export class LoginService {
 
   loginSucess: boolean = false;
-  constructor(private router: Router, private httpService: HttpService, private responseService: ResponseService, private message: NzMessageService,private authService:AuthService) { }
+  constructor(private router: Router, private httpService: HttpService, private responseService: ResponseService, private message: NzMessageService,private authService:AuthService,private loader:NgxUiLoaderService) { }
 
   validateLogin(login: any) {
+    this.loader.start();
      var msg="";
 
     this.httpService.doPost(AppConstants.APIS.getUser, login).subscribe((data) => {
@@ -35,6 +37,8 @@ export class LoginService {
         } else {
           msg= 'Good Evening!!';
         }
+        this.loader.stop();
+
         this.message.success(msg,);
 
 
@@ -44,9 +48,6 @@ export class LoginService {
         this.message.error("Email or password is incorrect")
       }
     })
-
-
-
   }
 
 }

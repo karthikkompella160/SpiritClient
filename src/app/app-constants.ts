@@ -6,7 +6,7 @@ import { Injectable } from "@angular/core";
 
 export class AppConstants {
     public static url: String;
-
+   
     public static get APIS() {
 
         return {

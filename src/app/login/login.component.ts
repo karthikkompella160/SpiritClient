@@ -9,21 +9,18 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService:LoginService) { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
   }
 
-
-
   validateLogin(form: NgForm) {
-    const loginCredentials={
-      email:form.controls.email.value,
-      pwd:form.controls.password.value
+    const loginCredentials = {
+      email: form.controls.email.value,
+      pwd: form.controls.password.value
     }
 
     this.loginService.validateLogin(loginCredentials);
-     
-    }
-    
+  }
+
 }
